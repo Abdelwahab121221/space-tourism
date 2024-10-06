@@ -1,0 +1,144 @@
+/* start header  */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 13.2vh;
+  padding-top: 3vh;
+}
+header div.logo {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 32px;
+  z-index: 1;
+}
+header img.logo {
+  background-color: var(--white);
+  margin-right: 64px;
+  margin-left: 32px;
+}
+header div.logo span {
+  background-color: rgba(151, 151, 151, 1);
+  height: 1px;
+  flex: 1;
+}
+div.menu {
+  display: none;
+}
+img.menu {
+  cursor: pointer;
+}
+header nav {
+  flex: 1;
+  backdrop-filter: blur(150px);
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+header nav ul li:first-child {
+  margin-left: 10%;
+}
+header nav ul li a {
+  display: flex;
+  height: calc(13.2vh - 3vh);
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: 0.7s;
+  font-size: 14px;
+  line-height: 16.8%;
+  letter-spacing: 2px;
+}
+header nav ul li a:hover {
+  border-bottom: 2px solid #ffffff80;
+}
+header nav ul li a.active {
+  border-bottom: 2px solid white;
+}
+header nav ul li a strong {
+  margin-right: 12px;
+}
+.navMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  backdrop-filter: blur(50px);
+  animation: width 1s;
+}
+.navMenu .close {
+  cursor: pointer;
+}
+/* Responsive */
+@media (max-width: 830px) {
+  header {
+    padding-top: 0;
+    height: 9.2vh;
+  }
+  header nav {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  header div.logo {
+    flex: 0;
+    left: 0;
+  }
+  header img.logo {
+    margin: 0 40px;
+  }
+  header div.logo span {
+    display: none;
+  }
+  header nav ul li a {
+    height: 9.2vh;
+  }
+}
+@media (max-width: 550px) {
+  header {
+    height: 10.8vh;
+    padding: 20px;
+  }
+  header img.logo {
+    margin: 0;
+  }
+  header div.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header nav {
+    display: none;
+  }
+  .navMenu {
+    height: 100vh;
+    width: 60vw;
+    z-index: 1;
+    padding-left: 32px;
+  }
+  .navMenu > img {
+    margin: 32px 0;
+    position: relative;
+    left: 75%;
+  }
+  .navMenu ul li {
+    margin-bottom: 32px;
+  }
+  .navMenu ul li a {
+    display: block;
+    width: 100%;
+  }
+  .navMenu ul li a.active {
+    border-right: 2px solid;
+  }
+}
+/* start animations */
+@keyframes width {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 60vw;
+  }
+}
+/* end header  */
